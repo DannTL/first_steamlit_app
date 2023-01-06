@@ -14,7 +14,7 @@ st.text('Kale, Spinach & Rocket Smoothie')
 st.text('Hard-Boiled Free-Range Egg')
 
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-st.multiselect("Pick some fruits:" , list(fruit_list.index))
+st.multiselect("Pick some fruits:" , list(fruit_list.index),['Avocado','Strawberries'])
 
 st.dataframe(fruit_list)
 
