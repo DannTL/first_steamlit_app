@@ -1,17 +1,19 @@
 
-import streamlit
-import pandas 
+import streamlit as st
+import pandas as pd
 
-fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 
 
-streamlit.title('My Parents New Healthy Diner')
+st.title('My Parents New Healthy Diner')
 
-streamlit.header('Breakfast Menu')
-streamlit.text('Omega 3 & Blueberry Oatmeal')
-streamlit.text('Kale, Spinach & Rocket Smoothie')
-streamlit.text('Hard-Boiled Free-Range Egg')
+st.header('Breakfast Menu')
+st.text('Omega 3 & Blueberry Oatmeal')
+st.text('Kale, Spinach & Rocket Smoothie')
+st.text('Hard-Boiled Free-Range Egg')
 
-streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-streamlit.dataframe(fruit_list)
+st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
+st.multiselect("Pick some fruits:" , list(fruit_list.index))
+
+st.dataframe(fruit_list)
 
