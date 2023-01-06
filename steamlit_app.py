@@ -3,4 +3,4 @@ import streamlit
 
 streamlit.title('My Parents New Healthy Diner')
 
-streamlit.write('Breakfast Menu')
+streamlit.title('Breakfast Menu')
