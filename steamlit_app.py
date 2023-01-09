@@ -19,7 +19,7 @@ fruits_selected = st.multiselect("Pick some fruits:" , list(fruit_list.index),['
 fruits_to_show = fruit_list.loc[fruits_selected]
 
 st.dataframe(fruits_to_show)
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 st.text(fruityvice_response.json())
 
 # write your own comment -what does the next line do? 
