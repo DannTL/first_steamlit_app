@@ -27,6 +27,13 @@ st.write('The user entered ', fruit_choice)
 
 st.text(fruityvice_response.json())
 
+
+add_my_fruit = st.text_input('What fruit would you like to add?','Jackfruit') 
+st.write('The user entered ', add_my_fruit)
+
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+
+
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
@@ -39,6 +46,3 @@ my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 st.header("The fruit load list contains:")
 st.dataframe(my_data_rows)
-
-add_my_fruit = st.text_input('What fruit would you like to add?','Jackfruit') 
-st.write('The user entered ', add_my_fruit)
