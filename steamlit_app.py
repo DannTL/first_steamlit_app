@@ -31,7 +31,6 @@ st.text(fruityvice_response.json())
 add_my_fruit = st.text_input('What fruit would you like to add?','Jackfruit') 
 st.write('The user entered ', add_my_fruit)
 
-my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 
 
 # write your own comment -what does the next line do? 
